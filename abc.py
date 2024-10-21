@@ -1,9 +1,9 @@
 import streamlit as st
 import PyPDF2
-from transformers import RagTokenizer, RagRetriever, RagTokenForGeneration
+from transformers import BartTokenizer, RagRetriever, RagTokenForGeneration
 
 # Initialize RAG components (pre-trained RAG model)
-tokenizer = RagTokenizer.from_pretrained("facebook/rag-token-nq")
+tokenizer = BartTokenizer.from_pretrained("facebook/rag-token-nq")
 retriever = RagRetriever.from_pretrained("facebook/rag-token-nq")
 model = RagTokenForGeneration.from_pretrained("facebook/rag-token-nq")
 
